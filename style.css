@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FEAE6F;
+    text-align: center;
+}
+h1{
+    font-size: 8vh;
+}
+.container{
+    padding-top: 8vh;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 1vmin;
+    
+}
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    background-color: #F6DCAC;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 3);
+    font-size: 10vmin;
+    color: #6F4E37;
+}
+#reset{
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: #481E14;
+    color: #F6DCAC;
+    border-radius: 10px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+#resetWin{
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: #481E14;
+    color: #F6DCAC;
+    border-radius: 10px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.msg{
+    padding: 12px;
+    font-size: 20px;
+}
+.winMsgContainer{
+    height: 17vmin;
+}
+.hide{
+    display: none;
+}
