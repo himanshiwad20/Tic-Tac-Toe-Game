@@ -19,6 +19,7 @@ const resetGame=()=>{
 
 var x=0;
 var o=0;
+let won=false;
 const checkWinner= ()=>{
     for(let ptrn of winPtrn){ 
         x=0;
@@ -33,15 +34,24 @@ const checkWinner= ()=>{
         }
         if(x==3){
             win("X");
+            won=true;
             break;
         }
         if(o==3){
             win("O");
+            won=true;
             break;
         }
     }
 };
 
+const draw= ()=>{
+    msg.innerText="OOpss! It's a Draw.";
+    winMsg.classList.remove("hide");
+    resetBtn.classList.add("hide");
+}
+
+let clicked=0;
 btns.forEach((btn)=>{
     btn.addEventListener("click", ()=>{
         if(playerX===true){
@@ -54,8 +64,12 @@ btns.forEach((btn)=>{
             playerX=true;
             playerO=false;
         }
+        clicked++;
         btn.disabled=true;
         checkWinner();
+        if(clicked===9 && won===false){
+            draw();
+        }
     });
 });
 
