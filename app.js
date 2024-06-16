@@ -15,6 +15,8 @@ const resetGame=()=>{
     enableBtns();
     playerX=true;
     playerO=false;
+    clicked=0;
+    won=false;
 };
 
 var x=0;
